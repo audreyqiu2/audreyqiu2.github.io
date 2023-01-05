@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <body>
-    <div class="page-container">
-      <h1 class="header">Rumplestiltskin's portfolio page!</h1>
-      <p>This is where I am documenting my work for HCDE 438.</p>
+<head>
+  <title>Layout Master</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+      <ul class="blue main-nav sticky">
+        <!-- <li><a>About</a></li>
+        <li><a>Products</a></li>
+        <li><a>Our Team</a></li> -->
+        <div class="nav-right">
+          <li><a>About Me</a></li>
+          <li><a>Cheatsheets</a></li>
+        </div>
+      </ul>
+    <div class="container zone"><img src="./img/undraw.png" class="cover"></div>
+    <div class="zone blue grid-wrapper">
+        <div class="project-square zone">
+          <img src="./img/data_storage_2_2.png">
+        </div>
+        <div class="project-square zone">
+          <img src="./img/desktop_analytics_2.png">
+        </div>
+        <div class="project-square zone">
+          <img src="./img/files_2.png">
+        </div>
+        <div class="project-square zone">
+          <img src="./img/monitor_coding_2.png">
+        </div>
+        <div class="project-square zone">
+          <img src="./img/monitor_settings_2.png">
+        </div>
+        <div class="project-square zone">
+          <img src="./img/server_2_2.png">
+        </div>
+        <div class="project-square zone">
+          <img src="./img/server_3.png">
+        </div>
+        <div class="project-square zone">
+          <img src="./img/server_safe_2.png">
+        </div>
 
-      <h2>projects</h2>
-      <div class="picture-container">
-        <a href="./bio/bio.html">
-          <img
-            class="picture"
-            src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Goblin_illustration_from_19th_century.jpg"
-          />
-        </a>
-        <a href="./recipe/recipe.html">
-          <img
-            class="picture"
-            src="https://picky-palate.com/wp-content/uploads/2010/08/BlueberryOatmealCookie2.jpg"
-          />
-        </a>
-      </div>
     </div>
-  </body>
+    <footer class="zone yellow">Footer</footer>
+</body>
 </html>
