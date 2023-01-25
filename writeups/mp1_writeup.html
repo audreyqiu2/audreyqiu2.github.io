@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me</title>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+  <section class="content mp0 writeup">
+    <h1>MP1: Browser Extension</h1>
+    <section>
+      <h2>Overview</h2>
+      <p>
+        A browser extension is a program that lives within the browser. It has the
+        capability to manipulate the DOM and have access to the current website
+        the user is on.
+
+        I chose to make a Windows 95 themed browser extension that changes the
+        font of the text on the page. In order to access the extension and include
+        it onto your own browser, go to <a href="https://github.com/audreyqiu2/audreyqiu2.github.io/tree/main/extension">this link</a>
+        and download the windows-95 folder. If using Google Chrome, go to
+        <a href="chrome://extensions">chrome://extensions</a>, "Load unpacked", and select the
+        downloaded "windows-95" directory. Go to any website (<a href="https://en.wikipedia.org/wiki/Pineapple">https://en.wikipedia.org/wiki/Pineapple</a>)
+        and select the Windows 95 icon from your browser extensions, and watch your font change!
+      </p>
+      <img src="../imgs/browser-extension.gif">
+    </section>
+
+    <section>
+      <h2>Development Process</h2>
+      <p>
+        For this project, I took a couple of steps. First, I had to consolidate the general file structure
+        for creating a browser extension; this includes a manifest.json file, and appropriate content scripts
+        to be able to access browser extension popups.
+
+        Next, I started coding the simple user interface (HTML/CSS)for the extension that includes a brief
+        introduction to the extension and then a toggle for transforming the site into Windows 95 theme.
+
+        After creating the client-side code and scripts, I started working with the Javascript logic that would
+        do the magic of transforming the text on the page into a completely different font. This part of the process
+        was definitely the hardest, I ran into a lot of obstacles including not knowing how to pass information
+        between the content and displayed JS files for my extension. Using the Chrome API was also a new challenge
+        that required a lot of Google searching.
+
+        One issue in particular, was that I wasn't able to select all of the HTML text on the page very easily.
+        At one point, I was only able to select all the <p> tags on the webpage:
+      </p>
+      <img src="../imgs/unfinished-extension.png">
+      <p>
+        After many hours of trial and error, I was able to finish my extension and have it exhibit the proper behavior.
+      </p>
+    </section>
+
+    <section>
+      <h2>Issue Deep Dive</h2>
+      <p>
+        The aforementioned issue was one of logic. While my first impression for selecting all of the
+        text on the DOM was to query select all of the p tags, there are more than just p tags that contain
+        text rendered on the page. Thus, I had to rethink how to select all of the nodes that had proper
+        text that I could apply style changes to.
+
+        I resolved this by thinking about an example; an <a> tag would have text inside of it, and I was able to
+        utilize the browser console to observe that when I selected an HTML node, there is a property called
+        'innerText' that is the displayed text on the rendered webpage. Using this to my advantage, I
+        made a loop through all of the nodes to check if the 'innerText' property existed in each DOM element.
+      </p>
+    </section>
+
+    <section>
+      <h2>Future Ideas</h2>
+      <ul>
+        <li>Adding a custom cursor along with the font change</li>
+        <li>Making a more elaborate user interface</li>
+        <li>Incorporating system sounds</li>
+      </ul>
+    </section>
+
+  </section>
+</body>
+</html>

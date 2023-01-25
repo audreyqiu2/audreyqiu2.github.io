@@ -115,17 +115,17 @@ a {
 }
 
 .project-square {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
     margin: 20px 20px 20px 20px;
     background-color: #ffffff;
     border: solid 1px #6D6875;
     padding: 20px;
     align-self: center;
     justify-self: center;
-}
-
-.project-square>img {
-    height: 100px;
-    width: 100px;
 }
 
 footer {
@@ -143,14 +143,20 @@ footer {
     box-shadow:rgba(0,0,0,0.8) 0px 2px 2px, inset rgba(0,0,0,0.1) 0px -5px 5px;
 }
 
-.project-square .pink {
-    background-color: rgb(181, 131, 141);
+.pink:hover {
+    background-color: rgb(240, 185, 196);
 }
 
+.yellow:hover {
+    background-color: rgb(243, 236, 107)
+}
+
+.project-square img {
+    width: 150px;
+}
 
 .project-square:hover {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.165);
     transition: 0.2s;
 }
 
