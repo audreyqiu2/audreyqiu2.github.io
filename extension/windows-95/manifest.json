@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "windows-95-theme",
+    "description": "Changes the font of the page to be Microsoft Sans Serif, and the cursor is replaced with a cursor from Windows 85.",
+    "version": "1.0",
+    "permissions": ["scripting"],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "icon.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["./cursor.png"],
+            "matches": [ "*://*/*" ]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "*://*/*" ],
+            "js": [ "content-scripts/page.js" ]
+        }
+    ]
+}

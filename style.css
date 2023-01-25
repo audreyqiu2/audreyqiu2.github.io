@@ -143,10 +143,14 @@ footer {
     box-shadow:rgba(0,0,0,0.8) 0px 2px 2px, inset rgba(0,0,0,0.1) 0px -5px 5px;
 }
 
+.project-square .pink {
+    background-color: rgb(181, 131, 141);
+}
+
 
 .project-square:hover {
     cursor: pointer;
-    background-color: rgba(181, 131, 141, 0.4);
+    background-color: rgba(0, 0, 0, 0.165);
     transition: 0.2s;
 }
 
