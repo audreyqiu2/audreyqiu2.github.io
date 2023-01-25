@@ -41,8 +41,14 @@
         between the content and displayed JS files for my extension. Using the Chrome API was also a new challenge
         that required a lot of Google searching.
 
-        One issue in particular, was that I wasn't able to select all of the HTML text on the page very easily.
-        At one point, I was only able to select all the <p> tags on the webpage:
+        In this process, I encountered an obstacle with resetting the original's page fonts. I originally was thinking
+        very complexly: to save each HTML node's original font in a JS dictionary whose (key, value) pair is (HTML Node,
+        original font). However, this method was not working in the way I expected it to. After tweaking around with the
+        code and still getting no progress, I realized that I could just refresh the current tab when the user wants to
+        'reset' the font, and switch the toggle to off.
+
+        Another issue in particular was that I wasn't able to select all of the HTML text on the page very easily.
+        At one point, I was only able to select all the p tags on the webpage:
       </p>
       <img src="../imgs/unfinished-extension.png">
       <p>
