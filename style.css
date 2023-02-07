@@ -1,5 +1,9 @@
 body {
+    width: 100vw;
+    max-width: 50em;
     margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -148,7 +152,11 @@ footer {
 }
 
 .yellow:hover {
-    background-color: rgb(243, 236, 107)
+    background-color: rgb(243, 236, 107);
+}
+
+.purple:hover {
+    background-color: rgb(230, 162, 255);
 }
 
 .project-square img {
@@ -186,4 +194,27 @@ footer {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.grid-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+}
+
+.grid-wrapper img {
+    width: 200px;
+    height: 200px;
+}
+
+.gallery-btn {
+    padding: 20px 40px;
+    text-align: center;
+    border: 1px solid rgb(64, 96, 53);
+}
+
+.gallery-btn:hover {
+    transition: 250ms;
+    cursor: pointer;
+    background-color: rgb(97, 146, 79);
+    color: rgb(255,255,255);
 }
