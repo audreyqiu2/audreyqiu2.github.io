@@ -159,6 +159,10 @@ footer {
     background-color: rgb(230, 162, 255);
 }
 
+.green:hover {
+    background-color: rgb(144, 214, 118);
+}
+
 .project-square img {
     width: 150px;
 }
