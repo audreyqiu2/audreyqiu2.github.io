@@ -111,10 +111,10 @@ function draw() {
     // fill(ampMeasure, newWaveForm, 255 - energy);
 
     // !!! Strobe-y orange-green theme !!!
-    // fill(newWaveForm, ampMeasure, 255 - energy);
+    fill(newWaveForm, ampMeasure, 255 - energy);
 
     // Strobe-y light blue-purple theme
-    fill(newWaveForm, ampMeasure, energy);
+    // fill(newWaveForm, ampMeasure, energy);
 
     rect(x, y, w, windowHeight - y);
   }
