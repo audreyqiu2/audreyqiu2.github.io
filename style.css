@@ -11,6 +11,11 @@ h1 {
     font-size: 2rem;
 }
 
+h2 {
+    margin-top: 12vh;
+    margin-bottom: 2vh;
+}
+
 .content {
     padding: 12% 10%;
 }
@@ -21,8 +26,9 @@ h1 {
     display: flex;
     list-style: none;
     font-size: 1rem;
-    padding: 20px 15px;
+    padding-top: 4vh;
     margin-top: 0px;
+    margin-right: auto;
 }
 
 @media only screen and (max-width: 600px) {
@@ -44,7 +50,16 @@ h1 {
     display: flex;
     flex-direction: row;
     margin-left: auto;
-    padding-right: 60px;
+    margin-right: auto;
+    padding-right: 24vw;
+}
+
+.nav-right:hover {
+    cursor: pointer;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
 }
 
 .sticky {
@@ -61,6 +76,17 @@ li {
 a {
     color: #835ebb;
     text-decoration: none;
+}
+
+.showcase > div {
+    opacity: 0.3;
+    transition: .7s ease;
+}
+
+.showcase > div:hover {
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+    transition: .7s ease;
 }
 
 /* DROPDOWN NAV */
@@ -115,7 +141,7 @@ a {
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: 1fr;
-    padding: 50px 30px;
+    padding: 40px 30px;
 }
 
 .project-square {
@@ -204,6 +230,23 @@ footer {
     width: 50%;
 }
 
+.showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    width: 75vw;
+}
+
+.showcase div {
+    margin-right: auto;
+    /* margin-left: auto; */
+}
+
+.showcase img {
+    width: 40vw;
+}
+
 .grid-wrapper {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-template-rows: 1fr;
@@ -225,4 +268,8 @@ footer {
     cursor: pointer;
     background-color: rgb(97, 146, 79);
     color: rgb(255,255,255);
+}
+
+#pfp {
+    width: 20vw;
 }
