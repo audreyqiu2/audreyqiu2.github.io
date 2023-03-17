@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>FP2: Final Project Writeup</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <section class="content writeup">
+      <h1>aud-iovisualizer</h1>
+      <img id="big-img" src="../imgs/audiovisualizer.png">
+      <section>
+        <h2>Overview</h2>
+        <p>
+          My project is a customizable audio visualizer that converts the audio input into visuals.
+
+          With a Spotify premium account, a user is shown their top 10 playlists and they are able to
+          stream from their account while the application turns it into visuals.
+
+          This project makes requests to the Spotify API on behalf of the user and displays their
+          playlists, user info, and initiates playback.
+
+          Due to how I developed this app, I was unable to successfully host my project online.
+          However, follow the steps below to view my project in your own browser.
+        </p>
+        <h3>Prerequisites</h3>
+        <ul>
+          <li>Have a Spotify Premium account</li>
+          <li>Open the <a target="__blank" href="https://open.spotify.com/">Spotify Web Player</a>in your browser on another tab</li>
+          <li>Install an IDE, I recommend Visual Studio Code</li>
+        </ul>
+        <h3>Steps for running aud-iovisualizer</h3>
+        <ul>
+          <li>In your terminal, navigate to a folder that you would like to download the files to</li>
+          <li>Type in the command "git clone https://github.com/audreyqiu2/aud.iovisualizer.git" and wait for the files to download</li>
+          <li>Click on the "Go Live" function in your IDE to run a local server</li>
+          <li>If a browser page does not launch automatically, navigate to <a target="__blank" href="http://localhost:4000/">http://localhost:4000/</a></li>
+          <li>Allow the browser to access your microphone when prompted</li>
+          <li>Login to Spotify when prompted and enjoy!</li>
+        </ul>
+        <p>Note: you may need to navigate to <a target="__blank" href="http://localhost:4000/">http://localhost:4000/</a> again once logging in and granting microphone permissions</p>
+        <img src="../imgs/visualizer-preview.gif">
+      </section>
+
+      <section>
+        <h2>Development Process</h2>
+        <h3>Main Steps</h3>
+        <ul>
+          <li>Create visualizer with p5 sound and FFT analyze</li>
+          <li>Add Spotify integration</li>
+          <li>Allow Spotify API calls</li>
+          <li>Make the UI for the audiovisualizer</li>
+        </ul>
+        <p>
+          I tried several hosting services to attempt to host my dynamic server side file however,
+          none of the services I tried was able to do so efficiently.
+        </p>
+        <img src="../imgs/vercel-hosting.png">
+      </section>
+
+      <section>
+        <h2>Issue Deep Dive</h2>
+        <p>
+          There were two main challenges I had while completing this project. The first was configuring my
+          server and client side scripts to allow me to make calls to the Spotify API. I used Express and Fetch
+          to do so. There were many challenges with this as I figured out how to navigate the OAuth process and pass
+          data back and forth from the client and server side.
+
+          Another big issue was hosting my project once it was functioning locally. Since GitHub only allows static hosting,
+          I first tried using Firebase to host my project, however, I kept running into various issues such as Forbidden Access to
+          my own endpoints despite changing permissions to allow for public calls. I then tried hosting through Vercel, which was also
+          unable to correctly configure my endpoints. I went back to Firebase one more time to try it again, but I was gettign the same
+          errors--I was able to access a test endpoint through Firebase, but only if it was running locally.
+
+          My mistake was waiting until I was fully finished with my project to host the project. Next time, I would host and build
+          my project in parallel to ensure that my endpoints would work throughout the way and that it could be accessed not just locally.
+        </p>
+      </section>
+
+      <section>
+        <h2>Ideas & Future Ideas</h2>
+        <ul>
+          <li>Adding a playback information widget that allows the user to see what song and artist is currently playing</li>
+          <li>Adding different themes that would allow the user to change the color theme of the visuals</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Kudos</h2>
+        <ul>
+          <li>Thank you to Raina and Hannah for helping me walkthrough some of the issues I was running into</li>
+          <li>Thank you to Noah Krohngold and Cynthia Chung for being my rubber ducks</li>
+          <li><a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API</a></li>
+        </ul>
+      </section>
+
+    </section>
+  </body>
+</html>

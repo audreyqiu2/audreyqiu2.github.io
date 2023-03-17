@@ -193,6 +193,10 @@ footer {
     background-color: rgb(162, 195, 255);
 }
 
+.brown:hover {
+    background-color: rgb(96, 86, 65);
+}
+
 .project-square img {
     width: 150px;
 }
@@ -273,3 +277,16 @@ footer {
 #pfp {
     width: 20vw;
 }
+
+#big-img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 0.8rem;
+    }
+  }
